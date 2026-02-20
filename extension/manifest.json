@@ -14,7 +14,8 @@
     "service_worker": "background.js"
   },
   "action": {
-    "default_title": "Copy Clean URL"
+    "default_title": "URL Locale Cleaner",
+    "default_popup": "popup.html"
   },
   "content_scripts": [
     {

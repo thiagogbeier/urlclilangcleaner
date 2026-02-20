@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>URL Locale Cleaner</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <h1>URL Locale Cleaner</h1>
+    <p>Review the current tab URL before copying.</p>
+  </header>
+
+  <main>
+    <section>
+      <div class="row">
+        <h2>Original</h2>
+        <button type="button" class="copy" data-copy="original">Copy</button>
+      </div>
+      <textarea id="original" readonly rows="3"></textarea>
+    </section>
+
+    <section>
+      <div class="row">
+        <h2>Cleaned</h2>
+        <button type="button" class="copy" data-copy="cleaned">Copy</button>
+      </div>
+      <textarea id="cleaned" readonly rows="3"></textarea>
+    </section>
+
+    <p id="status" role="status" aria-live="polite"></p>
+  </main>
+
+  <script src="url-cleaner.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

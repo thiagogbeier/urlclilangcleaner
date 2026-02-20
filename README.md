@@ -8,7 +8,8 @@ A lightweight Manifest V3 browser extension that watches for copy or cut events 
 - Removes noisy marketing query parameters (e.g., `WT.mc_id`, `ocid`, `gclid`, `msclkid`) so shared links stay clean and privacy-friendly.
 - Runs entirely on the client: no network calls, analytics, or storage.
 - Works anywhere inside a webpage (static text, editable fields, rich text editors) without requiring any UI.
-- Adds a toolbar button and page context-menu entry labeled **Copy Clean URL** that instantly copies the current tab's normalized URL and flashes a badge confirmation so you know it hit the clipboard.
+- Adds a toolbar popup that shows the original vs. cleaned URL with quick-copy buttons for each.
+- Keeps the page context-menu entry labeled **Copy Clean URL** for one-click copying and flashes a badge confirmation so you know it hit the clipboard.
 
 > **Limitations**
 >
@@ -24,9 +25,9 @@ A lightweight Manifest V3 browser extension that watches for copy or cut events 
 ## Using the Toolbar Action
 
 1. Navigate to any supported documentation page (for example, a localized Microsoft Learn article).
-2. Click the extension's toolbar icon or right-click the page and choose **Copy Clean URL**.
-3. Watch the icon briefly display **CLEAN** (or **OK** if nothing changed), then paste anywhere—the clipboard now carries the normalized link.
-4. If the URL was already clean, the original value is copied unchanged.
+2. Click the extension's toolbar icon to open the popup.
+3. Review the **Original** and **Cleaned** URLs, then press **Copy** on the one you want.
+4. Right-click the page and choose **Copy Clean URL** for a one-click copy with a badge confirmation.
 
 ## Customizing Domains or Parameters
 
