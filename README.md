@@ -1,6 +1,6 @@
 # URL Locale Cleaner Extension
 
-A lightweight Manifest V3 browser extension that watches for copy or cut events inside webpages and automatically removes common language or marketing segments from URLs before they reach your clipboard. When you highlight a link such as `https://learn.microsoft.com/en-gb/azure/virtual-machines/overview` and press **Ctrl+C**, the extension rewrites it to `https://learn.microsoft.com/azure/virtual-machines/overview` so the server can redirect recipients to their preferred locale.
+A lightweight Manifest V3 browser extension that watches for copy or cut events inside webpages and automatically removes common language or marketing segments from URLs before they reach your clipboard. When you highlight a link such as `https://learn.microsoft.com/intune/intune-service/protect/certificate-connector-install` and press **Ctrl+C**, the extension rewrites it to `https://learn.microsoft.com/intune/intune-service/protect/certificate-connector-install` so the server can redirect recipients to their preferred locale.
 
 ## Features
 
@@ -30,6 +30,9 @@ A lightweight Manifest V3 browser extension that watches for copy or cut events 
 4. The badge shows **CLEAN** if the URL was modified, or **OK** if it was already clean.
 
 ### Screenshots
+
+**Toolbar action in progress:**
+![URL Locale Cleaner Action](urllocalecleaner-action.png)
 
 **Toolbar icon with badge confirmation:**
 ![URL Locale Cleaner Icon](urllocalecleaner.png)
@@ -137,3 +140,12 @@ Before submitting to either store, prepare the following:
 - If you need background logic (e.g., options page), extend the manifest and keep scripts in the `extension` directory.
 - Test your extension thoroughly on different documentation sites before submitting to stores.
 - Use the Chrome DevTools and Edge DevTools to debug and monitor console logs during development.
+
+---
+
+## Author
+
+**Thiago Beier**  
+Email: [thiago.beier@gmail.com](mailto:thiago.beier@gmail.com)
+
+Feel free to open issues, submit pull requests, or reach out with feedback and feature requests.
