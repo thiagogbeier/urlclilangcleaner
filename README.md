@@ -29,6 +29,16 @@ A lightweight Manifest V3 browser extension that watches for copy or cut events 
 3. Right-click the page and choose **Copy Clean URL** for the same one-click behavior.
 4. The badge shows **CLEAN** if the URL was modified, or **OK** if it was already clean.
 
+### Screenshots
+
+**Toolbar icon with badge confirmation:**
+![URL Locale Cleaner Icon](urllocalecleaner.png)
+
+**Edge browser integration:**
+![Edge Integration 1](urllocalecleaner-edge.png)
+
+![Edge Integration 2](urllocalecleaner-edge2.png)
+
 ## Customizing Domains or Parameters
 
 - The domain allowlist, locale pattern, and query-parameter blocklist live in `extension/url-cleaner.js`.
