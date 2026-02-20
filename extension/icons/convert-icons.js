@@ -7,16 +7,15 @@
  *   npm install sharp
  * 
  * Usage:
- *   node ../convert-icons.js
-   *   (Run from the extension/ directory)
+ *   node convert-icons.js (from extension/icons directory)
  */
 
 const fs = require('fs');
 const path = require('path');
 const sharp = require('sharp');
 
-const svgPath = path.join(__dirname, 'extension', 'icons', 'icon.svg');
-const iconDir = path.join(__dirname, 'extension', 'icons');
+const svgPath = path.join(__dirname, 'icon.svg');
+const iconDir = __dirname;
 
 const sizes = [16, 32, 48, 128];
 
