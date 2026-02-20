@@ -35,8 +35,95 @@ A lightweight Manifest V3 browser extension that watches for copy or cut events 
 - Add or remove entries to tailor the cleaner to your own documentation sources.
 - After editing the file, reload the extension from the browser's extension page to apply the changes.
 
+## Publishing to Chrome Web Store & Edge Add-ons
+
+### Prerequisites
+
+Before submitting to either store, prepare the following:
+
+1. **Create Extension Icons**
+   - Design or generate icons in these sizes: `16x16`, `32x32`, `48x48`, `128x128` PNG files.
+   - Save them to `extension/icons/` as `icon-16.png`, `icon-32.png`, `icon-48.png`, `icon-128.png`.
+   - Update `manifest.json` with the icons field:
+     ```json
+     "icons": {
+       "16": "icons/icon-16.png",
+       "32": "icons/icon-32.png",
+       "48": "icons/icon-48.png",
+       "128": "icons/icon-128.png"
+     }
+     ```
+
+2. **Write a Privacy Policy**
+   - Host a simple privacy policy on your website or GitHub Pages stating: _"This extension processes URLs locally without collecting, storing, or transmitting any personal data."_
+   - Both stores require a privacy policy URL.
+
+3. **Prepare Store Assets**
+   - A 1280×800px promotional banner (screenshot of the extension in action).
+   - A 128×128px icon (same as your extension icon).
+   - Store listing description (200–500 chars) highlighting the key benefits.
+
+4. **Developer Accounts**
+   - Chrome Web Store: Google account required for the $5 one-time registration fee.
+   - Edge Add-ons: Microsoft account required (free).
+
+### Publishing to Chrome Web Store
+
+1. **Package the extension**
+
+   ```bash
+   # Zip the extension folder
+   # Windows: right-click extension → Send to → Compressed (zipped) folder
+   # Or use command:
+   Compress-Archive -Path .\extension -DestinationPath urlclilangcleaner.zip
+   ```
+
+2. **Create a Chrome Web Store developer account**
+   - Visit [chrome.google.com/webstore/devconsole](https://chrome.google.com/webstore/devconsole).
+   - Sign in with your Google account and pay the $5 registration fee.
+
+3. **Upload and submit**
+   - Click **New Item** → select your `urlclilangcleaner.zip` file.
+   - Fill in the store listing:
+     - **Name**: URL Locale Cleaner
+     - **Description**: Copy clean URLs without locale segments or tracking parameters.
+     - **Category**: Developer Tools
+     - **Language**: English
+     - **Privacy policy URL**: your privacy policy URL
+     - **Screenshots & banner**: upload promotional images.
+   - Click **Publish** and wait for automatic review (usually 1–3 hours).
+
+### Publishing to Microsoft Edge Add-ons
+
+1. **Create a Microsoft Partner Center account**
+   - Visit [partner.microsoft.com](https://partner.microsoft.com).
+   - Sign in with your Microsoft account (free).
+
+2. **Create a new submission**
+   - Go to **Edge Add-ons Dashboard** → **New add-on**.
+   - Upload your `urlclilangcleaner.zip` file.
+
+3. **Fill in store details**
+   - **Name**: URL Locale Cleaner
+   - **Description**: Remove locale and marketing segments from documentation URLs.
+   - **Category**: Productivity
+   - **Privacy policy URL**: your privacy policy URL
+   - **Store listing**: upload screenshots and banner (same as Chrome).
+
+4. **Submit for review**
+   - Click **Publish** and wait for review (usually 24–48 hours).
+   - Edge reviews are generally stricter, so ensure your privacy policy and description are clear.
+
+### Post-Submission
+
+- Monitor both store listings for user reviews and feedback.
+- Update your version number in `manifest.json` and resubmit whenever you publish updates.
+- Respond professionally to user comments and reports.
+- Consider adding release notes to your GitHub repo for transparency.
+
 ## Development Tips
 
 - All logic currently resides in the content script so you can iterate quickly without bundlers.
-- If you need background logic (e.g., popup UI, options page), extend the manifest and keep scripts in the `extension` directory.
-- For production distribution, remember to bump the version in `manifest.json` and package the folder as instructed by the target browser store.
+- If you need background logic (e.g., options page), extend the manifest and keep scripts in the `extension` directory.
+- Test your extension thoroughly on different documentation sites before submitting to stores.
+- Use the Chrome DevTools and Edge DevTools to debug and monitor console logs during development.
