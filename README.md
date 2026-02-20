@@ -25,9 +25,9 @@ A lightweight Manifest V3 browser extension that watches for copy or cut events 
 ## Using the Toolbar Action
 
 1. Navigate to any supported documentation page (for example, a localized Microsoft Learn article).
-2. Click the extension's toolbar icon to open the popup.
-3. Review the **Original** and **Cleaned** URLs, then press **Copy** on the one you want.
-4. Right-click the page and choose **Copy Clean URL** for a one-click copy with a badge confirmation.
+2. Click the extension's toolbar icon to instantly copy the cleaned URL with a badge confirmation.
+3. Right-click the page and choose **Copy Clean URL** for the same one-click behavior.
+4. The badge shows **CLEAN** if the URL was modified, or **OK** if it was already clean.
 
 ## Customizing Domains or Parameters
 

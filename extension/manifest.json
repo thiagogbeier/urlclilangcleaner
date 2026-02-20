@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "URL Locale Cleaner",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Automatically removes locale segments and marketing params from copied URLs before they hit your clipboard.",
   "permissions": [
     "clipboardWrite",
@@ -14,8 +14,7 @@
     "service_worker": "background.js"
   },
   "action": {
-    "default_title": "URL Locale Cleaner",
-    "default_popup": "popup.html"
+    "default_title": "Copy Clean URL"
   },
   "content_scripts": [
     {
