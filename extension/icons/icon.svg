@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <rect width="128" height="128" fill="#2563eb"/>
+  <text x="64" y="70" font-size="48" font-weight="bold" fill="white" text-anchor="middle" font-family="Arial">URL</text>
+  <path d="M 30 85 Q 35 95 50 95 Q 65 95 70 85" stroke="white" stroke-width="3" fill="none" stroke-linecap="round"/>
+</svg>
