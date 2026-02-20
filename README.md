@@ -32,15 +32,15 @@ A lightweight Manifest V3 browser extension that watches for copy or cut events 
 ### Screenshots
 
 **Toolbar action in progress:**
-![URL Locale Cleaner Action](urllocalecleaner-action.png)
+![URL Locale Cleaner Action](images/urllocalecleaner-action.png)
 
 **Toolbar icon with badge confirmation:**
-![URL Locale Cleaner Icon](urllocalecleaner.png)
+![URL Locale Cleaner Icon](images/urllocalecleaner.png)
 
 **Edge browser integration:**
-![Edge Integration 1](urllocalecleaner-edge.png)
+![Edge Integration 1](images/urllocalecleaner-edge.png)
 
-![Edge Integration 2](urllocalecleaner-edge2.png)
+![Edge Integration 2](images/urllocalecleaner-edge2.png)
 
 ## Customizing Domains or Parameters
 
