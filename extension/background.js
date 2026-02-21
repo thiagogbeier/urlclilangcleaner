@@ -1,6 +1,6 @@
 /* global chrome */
 
-self.importScripts('url-cleaner.js');
+import('./url-cleaner.js');
 
 const MENU_ID = 'copy-clean-url';
 const BADGE_CLEAR_DELAY_MS = 1500;
@@ -60,7 +60,6 @@ async function copyTextViaPage(tabId, text) {
         }
       },
       args: [text],
-      world: 'MAIN',
       injectImmediately: false
     });
 
