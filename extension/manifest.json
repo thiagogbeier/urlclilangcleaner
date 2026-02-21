@@ -11,7 +11,9 @@
   },
   "permissions": [
     "clipboardWrite",
-    "activeTab"
+    "activeTab",
+    "scripting",
+    "contextMenus"
   ],
   "background": {
     "service_worker": "background.js"
