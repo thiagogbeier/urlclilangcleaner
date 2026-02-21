@@ -2,9 +2,6 @@
   'use strict';
 
   const LOCALE_DOMAINS = new Set([
-    'learn.microsoft.com',
-    'docs.microsoft.com',
-    'support.microsoft.com',
     'experienceleague.adobe.com',
     'developer.mozilla.org',
     'help.sap.com',
@@ -32,6 +29,12 @@
 
   function hostSupportsLocaleStripping(host) {
     const normalized = normalizeHost(host);
+    
+    // Check for Microsoft domains
+    if (normalized === 'microsoft.com' || normalized.endsWith('.microsoft.com')) {
+      return true;
+    }
+    
     if (LOCALE_DOMAINS.has(normalized)) {
       return true;
     }
