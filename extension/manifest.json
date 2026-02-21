@@ -11,9 +11,6 @@
   },
   "permissions": [
     "clipboardWrite",
-    "contextMenus",
-    "tabs",
-    "scripting",
     "activeTab"
   ],
   "background": {
@@ -21,12 +18,5 @@
   },
   "action": {
     "default_title": "Copy Clean URL"
-  },
-  "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "js": ["url-cleaner.js", "content-script.js"],
-      "run_at": "document_start"
-    }
-  ]
+  }
 }
