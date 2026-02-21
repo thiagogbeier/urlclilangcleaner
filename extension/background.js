@@ -1,7 +1,5 @@
 /* global chrome */
 
-import('./url-cleaner.js');
-
 const MENU_ID = 'copy-clean-url';
 const BADGE_CLEAR_DELAY_MS = 1500;
 const badgeTimers = new Map();
@@ -91,23 +89,31 @@ async function copyCleanUrlForTab(tab) {
   }
 }
 
-chrome.action.onClicked.addListener((tab) => {
-  copyCleanUrlForTab(tab);
-});
+async function initializeExtension() {
+  await import('./url-cleaner.js');
 
-chrome.runtime.onInstalled.addListener(() => {
-  chrome.action.setBadgeText({ text: '' });
-  chrome.action.setBadgeBackgroundColor({ color: '#2563eb' });
-  chrome.contextMenus.create({
-    id: MENU_ID,
-    title: 'Copy Clean URL',
-    contexts: ['action', 'page'],
-    documentUrlPatterns: ['http://*/*', 'https://*/*']
-  });
-});
-
-chrome.contextMenus.onClicked.addListener((info, tab) => {
-  if (info.menuItemId === MENU_ID) {
+  chrome.action.onClicked.addListener((tab) => {
     copyCleanUrlForTab(tab);
-  }
-});
+  });
+
+  chrome.runtime.onInstalled.addListener(() => {
+    chrome.action.setBadgeText({ text: '' });
+    chrome.action.setBadgeBackgroundColor({ color: '#2563eb' });
+    chrome.contextMenus.create({
+      id: MENU_ID,
+      title: 'Copy Clean URL',
+      contexts: ['action', 'page'],
+      documentUrlPatterns: ['http://*/*', 'https://*/*']
+    });
+  });
+
+  chrome.contextMenus.onClicked.addListener((info, tab) => {
+    if (info.menuItemId === MENU_ID) {
+      copyCleanUrlForTab(tab);
+    }
+  });
+}
+
+initializeExtension();
+
+initializeExtension();
