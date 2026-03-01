@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "URL Locale Cleaner",
   "version": "0.2.0",
-  "description": "Removes locale segments and marketing params from URLs. Auto-cleans on copy/cut, toolbar action, or right-click context menu. Works on learn.microsoft.com, developer.mozilla.org, and more.",
+  "description": "Removes locale and marketing segments from URLs. Auto-clean via copy/cut, toolbar, or context menu.",
   "icons": {
     "16": "icons/icon-16.png",
     "32": "icons/icon-32.png",
